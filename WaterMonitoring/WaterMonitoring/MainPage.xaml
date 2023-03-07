@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
+             x:Class="WaterMonitoring.MainPage">
+
+    <Grid RowDefinitions="68, *, 66"
+          RowSpacing="0">
+        <!--Header section-->
+        <Grid ColumnDefinitions="*, Auto"
+              Margin="35, 0, 35, 0">
+            <Image Source="Logo.png"
+                   HeightRequest="27"
+                   WidthRequest="89"
+                   HorizontalOptions="Start"/>
+
+            <StackLayout Grid.Column="1"
+                         Orientation="Horizontal"
+                         Spacing="15">
+                <Image Source="AvatarIcon"
+                        WidthRequest="27"
+                        HeightRequest="89"/>
+            
+                <Image Source="LogoutIcon.png"
+                        WidthRequest="16"
+                        HeightRequest="14" />
+            </StackLayout>
+        </Grid>
+
+        <!--Mid section-->
+        <ScrollView Grid.Row="1"
+                    Margin="35, 20, 35, 0">
+            <Grid RowDefinitions="*, *">
+                <StackLayout>
+
+                    <StackLayout Spacing="0">
+                        <Label Text="Welcome," FontFamily="Montserrat-Bold" />
+                        <Label Text="Admin" FontFamily="Montserrat-Regular" />
+                    </StackLayout>
+
+                    <Frame BackgroundColor="{StaticResource BlueColor}"
+                           Margin="0, 16, 0, 0"
+                           WidthRequest="305"
+                           HeightRequest="132"
+                           HasShadow="False"
+                           CornerRadius="10">
+
+                        <Grid ColumnDefinitions="*, Auto">
+                            <StackLayout Spacing="0"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="Start">
+                                <Label Text="It's time to test" FontFamily="Montserrat-Bold" FontSize="22" TextColor="{StaticResource WhiteColor}"/>
+                                <Label Text="the water" FontFamily="Montserrat-Bold" FontSize="22" TextColor="{StaticResource WhiteColor}"/>
+                            </StackLayout>
+
+                            <Image Grid.Column="1"
+                                   Source="Scientist.png"
+                                   WidthRequest="111"
+                                   HeightRequest="82"/>
+                        </Grid>
+                    </Frame>
+
+                    <StackLayout Margin="0, 23, 0, 0">
+                        <Label Text="Latest water test"
+                               FontFamily="Montserrat-Bold"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+
+        <!--Bottom section-->
+        <StackLayout Grid.Row="2"
+                     BackgroundColor="{StaticResource BlueColor}"
+                     Margin="0">
+            <!--TODO: Add navigation using xamarin community toolkit tabs-->
+        </StackLayout>
+    </Grid> 
+
+</ContentPage>
+
